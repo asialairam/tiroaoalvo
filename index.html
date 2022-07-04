@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Target Shooting</title>
+
+  <link rel="icon" href="images/target.webp">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    body {
+      cursor: url(cursores/mira.cur), default
+    }
+  </style>
+
+  <script src="script.js"> </script>
+  <script src="js/script.js" defer></script>
+  <script src="js/cronometro.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</head>
+
+<body>
+
+  <h1>
+    TARGET SHOOTING
+  </h1>
+
+  <h3 id="counter">TEMPO: 00:00</h3>
+
+  <p id="pontuacao">
+    <span class="pontuacao">PONTUÇÃO: 0</span>/<span class="tentativas">0</span>
+  </p>
+
+  <div>
+    <button id="iniciar" onclick="start(); play();" class="button"> INICIAR </button>
+    <button onclick="stop(); pause();" class="button"> PARAR </button>
+  </div>
+
+  <div class="form-popup" id="myForm">
+    <form class="form-container">
+      <h4>FIM DE JOGO!</h4>
+      
+      <label for="name"> NOME: </label>
+      <input type="text" id="nome" placeholder="Informe seu nome">
+      
+      <button type="submit" class="btn enviar" value="SALVAR" onclick="cadastrarNome()">SALVAR </button>
+      
+      <button type="button" class="btn cancel"  value= "FECHAR" onclick="closeForm()">FECHAR</button>
+    </form>
+  </div>
+  
+  <canvas width="600" height="400"></canvas>
+
+</body>
+
+</html>
